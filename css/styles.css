@@ -225,19 +225,6 @@ h2 {
 
 .galleryGrid {
     display: grid;
-    grid-template-columns: repeat(5,20%) ;
-    grid-template-rows: 10rem 10rem 10rem 10rem 10rem 10rem 10rem;
-    grid-template-areas:
-    "SetUp SetUp SetUp electricGuitar electricGuitar"
-    "SetUp SetUp SetUp electricGuitar electricGuitar"
-    "SetUp SetUp SetUp panels panels"
-    "mic pedals door panels panels"
-    "strings drums drums panels panels"
-    "acoustic drums drums panels panels"
-    "acoustic keyboards toms panels panels";
-    grid-row-gap: 0.2rem;
-    grid-column-gap: 0.2rem;
-    margin-top: 6.25rem;
 }
 
 .galleryImg1 {
@@ -542,3 +529,100 @@ a {
 .copyright {
     padding: 0rem 1rem 1rem 1rem;
 }
+
+/* MEDIA QUERIES - Mobile First */
+
+/* Mobile */
+
+@media screen and (max-width: 576px) {
+    /* Gallery */
+
+    .logoAndSloganFlex{
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    .nameAndSloganFlex {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    .name {
+        font-size: 80%;
+        padding-top: 1rem;
+    }
+    .slogan {
+        font-size: 70%;
+    }
+    .list {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        font-size: 60%;
+    }
+    .pages {
+        color: white;
+        text-decoration: none;
+        padding-right: none;
+    }
+    .galleryGrid {
+        display: block;
+        margin-top: 6.45rem;
+    }
+    
+    /* Services */
+    
+    .services {
+        padding-left: none;
+    }
+    
+    .servicesTitle {
+        padding: none;
+    }
+
+    .servicesFlex {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-right: 2rem;
+    }
+
+    .servicesBoxes {
+        width: 100%;
+    }
+
+}
+
+/* Tablet */
+
+@media screen and (min-width: 577px) and (max-width: 768px;){
+
+    /*Home */
+    {
+
+}
+}
+
+/* Desktop */
+
+@media screen and (min-width: 769px) {
+    /* Gallery */
+    .galleryGrid {
+        display: grid;
+        grid-template-columns: repeat(5,20%) ;
+        grid-template-rows: 10rem 10rem 10rem 10rem 10rem 10rem 10rem;
+        grid-template-areas:
+            "SetUp SetUp SetUp electricGuitar electricGuitar"
+            "SetUp SetUp SetUp electricGuitar electricGuitar"
+            "SetUp SetUp SetUp panels panels"
+            "mic pedals door panels panels"
+            "strings drums drums panels panels"
+            "acoustic drums drums panels panels"
+            "acoustic keyboards toms panels panels";
+        grid-row-gap: 0.2rem;
+        grid-column-gap: 0.2rem;
+        margin-top: 6.25rem;
+    }
+}
+
