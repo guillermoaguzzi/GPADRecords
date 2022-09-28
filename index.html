@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="apple-touch-icon" sizes="180x180" href="./assets/img/logo/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./assets/img/logo/favicon-32x32.png">
@@ -17,7 +18,7 @@
                 <a href="./index.html">
                     <img src="./assets/img/logo/full_logo.jpg" alt=" GPAD Records Logo" class="logo">
                 </a>
-                <div class="nameAndSlogan">
+                <div class="nameAndSloganHome">
                     <h1 class="name">GPAD Records</h1>
                     <p class="slogan">Music Production</p>
                 </div>
@@ -34,11 +35,37 @@
     </header>
     <main>
         <!--carousel-->
-        <div class="carousel">
+        <!--
+            <div class="carousel">
             <img src="./assets/img/carousel/1.jpg" alt="Recording voices at GPAD Records" class="carouselimg1">
             <img src="./assets/img/carousel/2.jpg" alt="Recording guitars at GPAD Records" class="carouselimg2">
             <img src="./assets/img/carousel/3.jpg" alt="Recording Keyboards Guitars at GPAD Records" class="carouselimg3">
             <img src="./assets/img/carousel/4.jpg" alt="Guitars at GPAD Records" class="carouselimg4">
+        </div>
+        -->
+        <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+            <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="./assets/img/carousel/1.jpg" class="d-block w-100 carouselimgs" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="./assets/img/carousel/2.jpg" class="d-block w-100 carouselimgs" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="./assets/img/carousel/3.jpg" class="d-block w-100 carouselimgs" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="./assets/img/carousel/4.jpg" class="d-block w-100 carouselimgs" alt="...">
+            </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+            </button>
         </div>
     </main>
     <footer>
@@ -67,5 +94,7 @@
         </div>
         <p class="copyright">©2021 GPAD Records.</p>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>
 </body>
 </html>
