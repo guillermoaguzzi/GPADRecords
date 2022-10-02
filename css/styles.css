@@ -29,21 +29,40 @@ nav {
     z-index: 2;
 }
 
-.navFlex {
+/* .navFlex {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     width: 100%;
-}
+} */
 
-.navFlexHome {
+/* .navFlexHome {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     width: 100%;
     background-color: transparent;
+} */
+
+.navBoostrap {;
+    position: fixed;
+    top: 0rem;
+    z-index: 2;
+}
+
+/* .nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+} */
+
+#navbarNav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-right: 2rem;
 }
 
 .logoAndSloganFlex {
@@ -53,12 +72,17 @@ nav {
     align-items: center;
 }
 
+.navbar-nav {
+    align-items: flex-end;
+    margin-right: -1.2rem;
+}
+
 .nameAndSloganHome {
     margin-top: 1rem;
 }
 
 .name {
-font-size: xx-large;
+    font-size: xx-large;
 }
 
 .slogan {
@@ -76,14 +100,14 @@ font-size: xx-large;
 }
 
 
-.list {
+/* .list {
     display: flex;
     flex-direction: row;
     justify-content: right;
     color: white;
     list-style-type: none;
     padding-right: 2rem;
-}
+} */
 
 .pages {
     color: white;
@@ -95,6 +119,8 @@ font-size: xx-large;
     color: white;
     text-shadow: 0.2rem 0.2rem 0.1rem #fe9900;
 }
+
+
 
 /* BODY */
 
@@ -175,20 +201,24 @@ h2 {
     color: white;
 }
 
-@keyframes whatsNewVideosAnimation{
-    0%{
+@keyframes whatsNewVideosAnimation {
+    0% {
         transform: scale(1, 1)
     }
-    25%{
+
+    25% {
         transform: scale(1.025, 1.025)
     }
-    50%{
+
+    50% {
         transform: scale(1.05, 1.05)
     }
-    75%{
+
+    75% {
         transform: scale(1.025, 1.025)
     }
-    100%{
+
+    100% {
         transform: scale(1, 1)
     }
 }
@@ -226,7 +256,7 @@ h2 {
     justify-content: space-between;
 }
 
-.artists{
+.artists {
     text-align: center;
     width: 50%;
     background-color: white;
@@ -525,7 +555,10 @@ h2 {
     margin-top: 2rem;
 }
 
-#fullName, #email, #phone, #language {
+#fullName,
+#email,
+#phone,
+#language {
     font-size: medium;
 }
 
@@ -576,7 +609,7 @@ h2 {
 }
 
 .messageBlock {
-    display:block;
+    display: block;
     text-align: center;
     margin-top: 2rem;
     margin-bottom: 1rem;
@@ -603,7 +636,7 @@ h2 {
 
 #audioSample:hover {
     box-shadow: 0rem 0rem 3rem #4F3000;
-    background-color:#c87900;
+    background-color: #c87900;
     /*background: linear-gradient (to right, #c87900 90%, #e18800 15%);*/
 }
 
@@ -645,6 +678,7 @@ footer {
 a {
     text-decoration: none;
 }
+
 .copyright {
     padding: 0rem 1rem 1rem 1rem;
 }
@@ -663,90 +697,113 @@ svg:hover {
 /* Mobile */
 
 @media screen and (max-width: 576px) {
+
     /* Gallery */
-    body {
-        max-width: 100%;
-    }
-    .navFlex {
-        max-width: 100%;
-    }
-    .logoAndSloganFlex{
+    .logoAndSloganFlex {
         justify-content: flex-start;
         align-items: flex-start;
     }
+
     .nameAndSloganFlex {
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
         align-items: flex-start;
     }
-    .name {
+
+    /* .name {
         font-size: 80%;
         padding-top: 1rem;
     }
+
     .slogan {
         font-size: 70%;
-    }
-    .list {
+    } */
+
+    /* .list {
         display: flex;
         flex-direction: column;
         align-items: flex-end;
         font-size: 60%;
+    } */
+
+    .navbar-toggler {
+        margin-right: 2.6rem;
+        margin-top: -1rem;
     }
+
     .pages {
         color: white;
         text-decoration: none;
-        padding-right: none;
+        font-size: 80%;
     }
-    .galleryGrid {
+
+    /*.galleryGrid {
         display: flex;
         flex-direction: column;
         margin-top: 6.45rem;
-    }
-    .galleryImg1, .galleryImg2, .galleryImg3, .galleryImg4, .galleryImg5, .galleryImg6, .galleryImg7, .galleryImg8, .galleryImg9, .galleryImg10, .galleryImg11 {
-        max-width: 100%;
-    }
-    /* Services */
-    
-    .services {
-        padding-left: none;
-    }
-    
-    .servicesTitle {
-        padding: none;
-    }
-    
-    .servicesFlex {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding-right: 2rem;
+        max-width: 100%;*/
+    .galleryGrid {
+        display: block;
     }
 
-    .servicesBoxes {
-        width: 100%;
-    }
+
+/* Services */
+
+.services {
+    padding-left: none;
+}
+
+.servicesTitle {
+    padding: none;
+}
+
+.servicesFlex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-right: 2rem;
+}
+
+.servicesBoxes {
+    width: 100%;
+}
 
 }
 
 /* Tablet */
 
-@media screen and (min-width: 577px) and (max-width: 1200px;){
-
+@media screen and (min-device-width: 577px) and (max-device-width: 1199px) { 
     /*Home */
-    {
+.nameAndSloganHome {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
 
+
+.navbar-nav {
+    align-items: flex-end;
+    margin-right: -3rem;
+}
+
+.navbar-toggler {
+    margin-top: -1rem;
 }
 }
+
+
 
 /* Desktop */
 
+
 @media screen and (min-width: 1200px) {
+
     /* Gallery */
     .galleryGrid {
         display: grid;
-        grid-template-columns: repeat(5,20%) ;
+        grid-template-columns: repeat(5, 20%);
         grid-template-rows: 10rem 10rem 10rem 10rem 10rem 10rem 10rem;
         grid-template-areas:
             "SetUp SetUp SetUp electricGuitar electricGuitar"
@@ -761,4 +818,3 @@ svg:hover {
         margin-top: 6.25rem;
     }
 }
-
