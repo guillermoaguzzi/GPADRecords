@@ -1,0 +1,121 @@
+@media screen and (max-width: 576px) {
+
+    /* Navbar */
+
+    .navbar-expand-lg {
+        background-color: black;
+    }
+
+    .logoAndSloganFlex {
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .nameAndSloganHome {
+        visibility: hidden;
+        /* display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        position: fixed;
+        top: 0rem;
+        left: 7rem; */
+    }
+
+    .navbar-nav {
+        position: fixed;
+        align-items: flex-end;
+        top: 5rem;
+        right: 5rem;
+    }
+
+    .navbar-toggler {
+        position: fixed;
+        right: 2.6rem;
+        top: 2.2rem;
+    }
+
+    .pages {
+        color: white;
+        text-decoration: none;
+        font-size: 60%;
+    }
+
+    /* Gallery */
+
+    .galleryGrid {
+        display: block;
+    }
+
+
+    /* Services */
+
+.services {
+    padding-left: none;
+}
+
+.servicesTitle {
+    padding: none;
+}
+
+.servicesFlex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-right: 2rem;
+}
+
+.servicesBoxes {
+    width: 100%;
+}
+
+    /* contact */
+
+.contact {
+    width: 100%;
+    font-size: 80%;
+}
+    aside {
+        display: none;
+    }
+}
+
+
+
+/* TABLET */
+
+@media screen and (min-device-width: 577px) and (max-device-width: 1199px) { 
+
+    /*Home */
+
+.nameAndSloganHome {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: fixed;
+    top: 0rem;
+    left: 7rem;
+}
+
+.navbar-nav {
+    align-items: flex-end;
+    margin-right: .1.2rem;
+}
+
+.navbar-toggler {
+    margin-top: -1rem;
+}
+
+    /* contact */
+
+    .contact {
+        width: 100%;
+        font-size: 80%;
+    }
+        .contactImg {
+            display: none;
+        }
+        .marshall {
+            display: none;
+        }
+    }

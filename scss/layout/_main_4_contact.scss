@@ -1,0 +1,162 @@
+/* contact */
+
+.contactFlex {
+    background-color: #fe9900;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 6.25rem;
+}
+
+.contact {
+    width: 50%;
+    font-size: larger;
+    fieldset {
+        border-style: dashed;
+        border-color: white;
+        border-radius: 2rem;
+        border-width: 0.1rem;
+        margin: 2rem;
+        padding: 2rem;
+    }
+    legend {
+        font-size: x-large;
+        text-align: center;
+    }
+}
+
+.contactImg {
+    width: 50%;
+}
+
+.contactText {
+    text-align: center;
+    padding-bottom: 2rem;
+}
+
+.inputsWidth {
+    width: 100%;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    &:hover {
+        box-shadow: 0rem 0rem 1rem #4F3000;
+    }
+}
+
+.textsMargins {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.servicesMargins {
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.divider {
+    border-style: dashed;
+    border-color: white;
+    border-radius: 2rem;
+    border-width: 0.1rem;
+    margin-top: 2rem;
+}
+
+#fullName,
+#email,
+#phone,
+#language {
+    font-size: medium;
+}
+
+.fullNameBlock {
+    display: block;
+}
+
+.emailBlock {
+    display: block;
+}
+
+.PhoneBlock {
+    display: block;
+}
+
+.languageBlock {
+    display: block;
+    margin-top: 2rem;
+}
+
+.PreferredContactMethodFlex {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+
+.PreferredContactMethodBlock {
+    display: block;
+    padding-top: 2rem;
+}
+
+.emailInputSpacing {
+    margin-right: 0.5rem;
+}
+
+.phoneInputSpacing {
+    margin-left: 2rem;
+    margin-right: 0.5rem;
+}
+
+.serviceBlock {
+    display: block;
+}
+
+.messageBlock {
+    display: block;
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.queryMessage {
+    width: 100%;
+    margin-bottom: 2rem;
+    font-family: "Quicksand";
+    font-size: large;
+    color: black;
+    &:hover {
+        box-shadow: 0rem 0rem 3rem #4F3000;
+    }
+}
+
+.fileFlex {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 0.25rem;
+}
+
+#audioSample:hover {
+    box-shadow: 0rem 0rem 3rem #4F3000;
+    background-color: #c87900;
+}
+
+.SubmitFlex {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-top: 3rem;
+}
+
+.submitButton {
+    height: 1.5rem;
+    width: 20%;
+    border-radius: 2rem;
+    border-color: white;
+    transition: all 0.5s;
+    &:hover {
+        transform: scale(1.1, 1.1);
+        background-color: black;
+        color: white;
+    }
+}

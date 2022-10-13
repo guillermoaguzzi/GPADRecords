@@ -1,0 +1,62 @@
+.artistsAndCatalogue {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    .artists {
+        text-align: center;
+        width: 50%;
+        background-color: white;
+        margin-top: 6.25rem;
+        h1 {
+            text-align: center;
+            padding-top: 2rem;
+            font-size: large;
+        }
+        p {
+            text-align: center;
+            padding-top: 2rem;
+        }
+    }
+    .catalogueFlex {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        .catalogue {
+            height: 100%;
+            width: 50%;
+            background-color: #fe9900;
+            text-align: center;
+            position: fixed;
+            top: 6.25rem;
+            right: 0rem;
+            bottom: .25rem;
+            h1 {
+                text-align: center;
+                padding-top: 2rem;
+                padding-bottom: 2rem;
+                font-size: large;
+            }
+            .playlist {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin-top: -4rem;
+                scale: 0.7;
+                &:hover {
+                    transform: scale(1.05, 1.05);
+                }
+            }
+        }
+    }
+}
+
+.artistImgAgustinAguzzi {
+    padding: 3.5em;
+    align-content: center;
+}
+
+.artistBiancaGironelli {
+    padding: 3.5em;
+    align-content: center;
+}

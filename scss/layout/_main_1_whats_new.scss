@@ -1,0 +1,85 @@
+/* what's new */
+
+.whatsNew {
+    background-color: #fe9900;
+    align-content: center;
+    margin-top: 6.25rem;
+    padding-bottom: 2rem;
+    h1 {
+        text-align: center;
+        padding: 2rem;
+    }
+    fieldset {
+        width: 90%;
+        border-style: dashed;
+        border-color: white;
+        border-radius: 2rem;
+        border-width: 0.1rem;
+        align-content: center;
+        margin: 0rem;
+        transition: background-color 1s, color 1s;
+        &:hover {
+            background-color: #D6850A;
+            color: white;
+        }
+        &:hover #newsVideosAnimation {
+            animation-name: whatsNewVideosAnimation;
+            animation-iteration-count: 1;
+            animation-timing-function: linear;
+            animation-duration: 1s;
+            animation-delay: 0.15s;
+        }
+        article {
+            display: flex;
+            flex-direction: row;
+            .newsVideos {
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                align-items: flex-start;
+                padding: 1rem 0rem 1rem 1rem;
+                max-width: 50%;
+                iframe {
+                    display: flex;
+                    scale: 0.8;
+                }
+            }
+            .textsFlex {
+                display: flex;
+                flex-flow: column wrap;
+                justify-content: center;
+                h2 {
+                    padding: 1rem 1rem 1rem 0rem;
+                    font-size: larger;
+                }
+                p {
+                    padding: 0rem 2rem 1rem 1rem;
+                    text-align:justify;
+                    font-size: medium;
+                }
+            }
+        }
+    }
+}
+
+@keyframes whatsNewVideosAnimation {
+    0% {
+        transform: scale(1, 1)
+    }
+
+    25% {
+        transform: scale(1.025, 1.025)
+    }
+
+    50% {
+        transform: scale(1.05, 1.05)
+    }
+
+    75% {
+        transform: scale(1.025, 1.025)
+    }
+
+    100% {
+        transform: scale(1, 1)
+    }
+}

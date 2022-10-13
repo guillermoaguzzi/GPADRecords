@@ -1,0 +1,24 @@
+/*BASE*/
+@import "./base/resets";
+@import "./base/typo";
+
+/*COMPONENTS*/
+@import "./components/bootstrap";
+
+/*LAYOUT*/
+@import "./layout/element_header";
+@import "./layout/element_body";
+@import "./layout/element_footer";
+@import "./layout/main_index";
+@import "./layout/main_1_whats_new";
+@import "./layout/main_2_artists_and_catalogue";
+@import "./layout/main_3_gallery";
+@import "./layout/main_3_services";
+@import "./layout/main_4_contact";
+@import "./layout/media";
+
+
+/*UTILITIES*/
+@import "./utilities/functions";
+@import "./utilities/mixins";
+@import "./utilities/variables";

@@ -1,0 +1,41 @@
+/*Header*/
+
+nav {
+    color: white;
+    background-color: black;
+    width: 100%;
+    list-style-type: none;
+    position: fixed;
+    top: 0rem;
+    z-index: 2;
+}
+
+.logo {
+    height: 4rem;
+    width: 4rem;
+    margin: 1rem;
+    &:hover {
+        box-shadow: 0rem 0rem 2rem #4E340D;
+    }
+}
+
+.nameAndSloganHome {
+    margin-top: 1rem;
+    h1 {
+        font-size: xx-large;
+    }
+    p {
+        font-size: medium;
+    }
+}
+
+.pages {
+    color: white;
+    text-decoration: none;
+    &:hover {
+        color: white;
+        text-shadow: 0.2rem 0.2rem 0.1rem #fe9900;
+    }
+}
+
+

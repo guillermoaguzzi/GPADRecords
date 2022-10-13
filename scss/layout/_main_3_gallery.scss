@@ -1,0 +1,108 @@
+.galleryGrid {
+    display: grid;
+    grid-template-columns: repeat(5, 20%);
+    grid-template-rows: 10rem 10rem 10rem 10rem 10rem 10rem 10rem;
+    grid-template-areas:
+        "SetUp SetUp SetUp electricGuitar electricGuitar"
+        "SetUp SetUp SetUp electricGuitar electricGuitar"
+        "SetUp SetUp SetUp panels panels"
+        "mic pedals door panels panels"
+        "strings drums drums panels panels"
+        "acoustic drums drums panels panels"
+        "acoustic keyboards toms panels panels";
+    grid-row-gap: 0.2rem;
+    grid-column-gap: 0.2rem;
+    margin-top: 6.25rem;
+    margin-bottom: 0.25rem;
+}
+
+.galleryImg1 {
+    grid-area: mic;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+
+}
+
+.galleryImg2 {
+    grid-area: drums;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.galleryImg3 {
+    grid-area: pedals;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+
+}
+
+.galleryImg4 {
+    grid-area: door;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.galleryImg5 {
+    grid-area: strings;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.galleryImg6 {
+    grid-area: SetUp;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.galleryImg7 {
+    grid-area: keyboards;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center left;
+}
+
+.galleryImg8 {
+    grid-area: acoustic;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.galleryImg9 {
+    grid-area: electricGuitar;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.galleryImg10 {
+    grid-area: toms;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.galleryImg11 {
+    grid-area: panels;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
