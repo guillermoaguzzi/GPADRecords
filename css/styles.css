@@ -18,18 +18,9 @@ html {
 
 /* NAV */
 
+/* CSS for previous Navbar
 
-nav {
-    color: white;
-    background-color: black;
-    width: 100%;
-    list-style-type: none;
-    position: fixed;
-    top: 0rem;
-    z-index: 2;
-}
-
-/* .navFlex {
+.navFlex {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -46,17 +37,45 @@ nav {
     background-color: transparent;
 } */
 
+/* .nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+} */
+
+/* .logoAndSloganFlex {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+}
+
+.list {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    color: white;
+    list-style-type: none;
+    padding-right: 2rem;
+} */
+
+
+nav {
+    color: white;
+    background-color: black;
+    width: 100%;
+    list-style-type: none;
+    position: fixed;
+    top: 0rem;
+    z-index: 2;
+}
+
 .navBoostrap {;
     position: fixed;
     top: 0rem;
     z-index: 2;
 }
 
-/* .nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-} */
 
 #navbarNav {
     display: flex;
@@ -65,16 +84,19 @@ nav {
     margin-right: 2rem;
 }
 
-.logoAndSloganFlex {
-    display: flex;
-    flex-direction: row;
-    justify-content: left;
-    align-items: center;
-}
-
 .navbar-nav {
     align-items: flex-end;
     margin-right: -1.2rem;
+}
+
+.logo {
+    height: 4rem;
+    width: 4rem;
+    margin: 1rem;
+}
+
+.logo:hover {
+    box-shadow: 0rem 0rem 2rem #4E340D;
 }
 
 .nameAndSloganHome {
@@ -89,30 +111,11 @@ nav {
     font-size: medium;
 }
 
-.logo {
-    height: 4rem;
-    width: 4rem;
-    margin: 1rem;
-}
 
-.logo:hover {
-    box-shadow: 0rem 0rem 2rem #4E340D;
-}
-
-
-/* .list {
-    display: flex;
-    flex-direction: row;
-    justify-content: right;
-    color: white;
-    list-style-type: none;
-    padding-right: 2rem;
-} */
 
 .pages {
     color: white;
     text-decoration: none;
-    padding-right: 2rem;
 }
 
 .pages:hover {
@@ -318,6 +321,19 @@ h2 {
 
 .galleryGrid {
     display: grid;
+    grid-template-columns: repeat(5, 20%);
+    grid-template-rows: 10rem 10rem 10rem 10rem 10rem 10rem 10rem;
+    grid-template-areas:
+        "SetUp SetUp SetUp electricGuitar electricGuitar"
+        "SetUp SetUp SetUp electricGuitar electricGuitar"
+        "SetUp SetUp SetUp panels panels"
+        "mic pedals door panels panels"
+        "strings drums drums panels panels"
+        "acoustic drums drums panels panels"
+        "acoustic keyboards toms panels panels";
+    grid-row-gap: 0.2rem;
+    grid-column-gap: 0.2rem;
+    margin-top: 6.25rem;
     margin-bottom: 0.25rem;
 }
 
@@ -669,6 +685,7 @@ footer {
     background-color: black;
     text-align: center;
     position: relative;
+    bottom: 0rem;
 }
 
 .socialmedia {
@@ -696,53 +713,71 @@ svg:hover {
 
 /* Mobile */
 
+
 @media screen and (max-width: 576px) {
 
-    /* Gallery */
+    /* Navbar */
+
+    .navbar-expand-lg {
+        background-color: black;
+    }
+
     .logoAndSloganFlex {
         justify-content: flex-start;
         align-items: flex-start;
     }
 
-    .nameAndSloganFlex {
-        display: flex;
+    .nameAndSloganHome {
+        visibility: hidden;
+        /* display: flex;
         flex-direction: column;
-        justify-content: flex-start;
         align-items: flex-start;
+        position: fixed;
+        top: 0rem;
+        left: 7rem; */
     }
 
-    /* .name {
+    .navbar-nav {
+        position: fixed;
+        align-items: flex-end;
+        top: 5rem;
+        right: 5rem;
+    }
+
+    .navbar-toggler {
+        position: fixed;
+        right: 2.6rem;
+        top: 2.2rem;
+    }
+
+    .pages {
+        color: white;
+        text-decoration: none;
+        font-size: 60%;
+    }
+
+    /* CSS for previous Navbar
+    
+    .name {
         font-size: 80%;
         padding-top: 1rem;
     }
 
     .slogan {
         font-size: 70%;
-    } */
-
-    /* .list {
+    }
+    
+    .list {
         display: flex;
         flex-direction: column;
         align-items: flex-end;
         font-size: 60%;
     } */
 
-    .navbar-toggler {
-        margin-right: 2.6rem;
-        margin-top: -1rem;
-    }
 
-    .pages {
-        color: white;
-        text-decoration: none;
-        font-size: 80%;
-    }
 
-    /*.galleryGrid {
-        display: flex;
-        flex-direction: column;
-        margin-top: 6.45rem;
-        max-width: 100%;*/
+    /* Gallery */
+
     .galleryGrid {
         display: block;
     }
@@ -776,16 +811,19 @@ svg:hover {
 
 @media screen and (min-device-width: 577px) and (max-device-width: 1199px) { 
     /*Home */
+
 .nameAndSloganHome {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    position: fixed;
+    top: 0rem;
+    left: 7rem;
 }
-
 
 .navbar-nav {
     align-items: flex-end;
-    margin-right: -3rem;
+    margin-right: .1.2rem;
 }
 
 .navbar-toggler {
@@ -801,7 +839,7 @@ svg:hover {
 @media screen and (min-width: 1200px) {
 
     /* Gallery */
-    .galleryGrid {
+    /* .galleryGrid {
         display: grid;
         grid-template-columns: repeat(5, 20%);
         grid-template-rows: 10rem 10rem 10rem 10rem 10rem 10rem 10rem;
@@ -816,5 +854,5 @@ svg:hover {
         grid-row-gap: 0.2rem;
         grid-column-gap: 0.2rem;
         margin-top: 6.25rem;
-    }
+    } */
 }

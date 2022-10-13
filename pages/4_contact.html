@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/logo/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/logo/favicon-32x32.png">
@@ -13,7 +14,46 @@
 </head>
 <body>
     <header>
-        <nav class="navFlex">
+        <nav class="navbar navbar-expand-lg navbar-black bg-black navBoostrap">
+            <div class="container-fluid bg-black navBoostrap" >
+            <!-- LOGO -->
+            <a class="navbar-brand" href="./index.html"><img src="../assets/img/logo/full_logo.jpg" alt=" GPAD Records Logo" class="d-inline-block align-text-top logo"></a>
+            <!-- NAME AND SLOGAN -->
+            <div class="nameAndSloganHome">
+                <h1 class="name">GPAD Records</h1>
+                <p class="slogan">Music Production</p>
+            </div>
+            <!-- BUTTON -->
+            <button class="navbar-toggler bg-transparent" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- PAGES -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active text-white pages" aria-current="page" href="../index.html">HOME</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active text-white pages" href="../pages/1_whats_new.html">WHAT'S NEW</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active text-white pages" href="../pages/2_artists_and_catalogue.html">ARTISTS & CATALOGUE</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active text-white pages" href="../pages/3_gallery.html">GALLERY</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active text-white pages" href="../pages/3_services.html">SERVICES</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active text-white pages" href="../pages/4_contact.html">CONTACT</a>
+                </li>
+                </ul>
+            </div>
+            </div>
+        </nav>
+        <!-- NAV BEFORE BOOTSTRAP
+            <nav class="navFlex">
             <div class="logoAndSloganFlex">
                 <a href="../index.html">
                     <img src="../assets/img/logo/full_logo.jpg" alt=" GPAD Records Logo" class="logo">
@@ -31,7 +71,7 @@
                 <li><a href="../pages/3_services.html" class="pages">SERVICES</a></li>
                 <li><a href="../pages/4_contact.html" class="pages">CONTACT</a></li>
             </ul>
-        </nav>
+        </nav> -->
     </header>
     <main class="contactFlex">
         <section class="contact">
