@@ -1,9 +1,16 @@
+/*VARIABLES*/
+@import "./utilities/variables";
+
 /*BASE*/
 @import "./base/resets";
 @import "./base/typo";
 
 /*COMPONENTS*/
 @import "./components/bootstrap";
+
+/*UTILITIES*/
+@import "./utilities/mixins";
+@import "./utilities/functions";
 
 /*LAYOUT*/
 @import "./layout/element_header";
@@ -16,9 +23,3 @@
 @import "./layout/main_3_services";
 @import "./layout/main_4_contact";
 @import "./layout/media";
-
-
-/*UTILITIES*/
-@import "./utilities/functions";
-@import "./utilities/mixins";
-@import "./utilities/variables";

@@ -1,7 +1,7 @@
-@mixin gallery ($grid-area, $width, $height, $object-fit, $object-position) {
-    grid-area: $grid-area;
-    width: $width;
+@mixin gallery ($gridearea, $height, $width, $objectfit, $objectposition) {
+    grid-area: $gridearea;
     height: $height;
-    object-fit: $object-fit;
-    object-position: $object-position;
+    width: $width;
+    object-fit: $objectfit;
+    object-position: $objectposition;
 }

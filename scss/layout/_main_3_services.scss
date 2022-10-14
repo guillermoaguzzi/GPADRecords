@@ -1,12 +1,9 @@
 /* services */
 
 .services {
-    background-color: #fe9900;
-    align-content: center;
-    text-align: center;
-    margin-top: 6.25rem;
-    padding-bottom: 2rem;
+    @extend .whatsNew;
     padding-left: 2rem;
+    text-align: center;
     h1 {
         padding-top: 2rem;
         padding-bottom: 2rem;
@@ -22,7 +19,7 @@
             border-color: white;
             border-radius: 2rem;
             border-width: 0.1rem;
-            margin: 1em;
+            margin: 1rem;
             transition: box-shadow 1s;
             &:hover {
                 box-shadow: 0rem 0rem 3rem #4F3000;
@@ -56,6 +53,3 @@
         }
     }
 }
-
-
-

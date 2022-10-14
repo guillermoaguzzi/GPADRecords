@@ -40,15 +40,32 @@
         font-size: 60%;
     }
 
+    /* What's New */
+
+    .newsVideos {
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        scale: 0.7;
+        margin-left: -2rem;
+    }
+
+    .textsFlex {
+        margin-left: 2.5rem;
+    }
+
+    /* Artists and Catalogue */
+
+    .artistsAndCatalogue {
+        display: block;
+    }
+
     /* Gallery */
 
     .galleryGrid {
         display: block;
     }
-
-
     /* Services */
-
 .services {
     padding-left: none;
 }

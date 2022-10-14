@@ -1,7 +1,6 @@
 .artistsAndCatalogue {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     .artists {
         text-align: center;
         width: 50%;
@@ -24,7 +23,7 @@
         .catalogue {
             height: 100%;
             width: 50%;
-            background-color: #fe9900;
+            background-color: $background-principal;
             text-align: center;
             position: fixed;
             top: 6.25rem;
@@ -41,8 +40,8 @@
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
-                margin-top: -4rem;
-                scale: 0.7;
+                margin-top: -1rem;
+                scale: 0.8;
                 &:hover {
                     transform: scale(1.05, 1.05);
                 }

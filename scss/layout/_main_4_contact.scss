@@ -1,7 +1,7 @@
 /* contact */
 
 .contactFlex {
-    background-color: #fe9900;
+    background-color: $background-principal;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -27,6 +27,9 @@
 
 .contactImg {
     width: 50%;
+    img {
+        object-fit: cover;
+    }
 }
 
 .contactText {
