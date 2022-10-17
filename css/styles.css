@@ -124,12 +124,14 @@ svg:hover {
         padding: 1rem 0rem 1rem 1rem;
         max-width: 50%; }
         .whatsNew fieldset article .newsVideos iframe, .services fieldset article .newsVideos iframe {
-          display: flex;
           scale: 0.8; }
       .whatsNew fieldset article .textsFlex, .services fieldset article .textsFlex {
         display: flex;
         flex-flow: column wrap;
-        justify-content: center; }
+        justify-content: center;
+        text-align: center;
+        max-width: 50%;
+        margin-left: 2rem; }
         .whatsNew fieldset article .textsFlex h2, .services fieldset article .textsFlex h2 {
           padding: 1rem 1rem 1rem 0rem;
           font-size: larger; }
@@ -154,6 +156,10 @@ svg:hover {
   display: flex;
   flex-direction: row; }
   .artistsAndCatalogue .artists {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
     width: 50%;
     background-color: white;
@@ -474,13 +480,7 @@ svg:hover {
     justify-content: flex-start;
     align-items: flex-start; }
   .nameAndSloganHome {
-    visibility: hidden;
-    /* display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        position: fixed;
-        top: 0rem;
-        left: 7rem; */ }
+    visibility: hidden; }
   .navbar-nav {
     position: fixed;
     align-items: flex-end;
@@ -494,34 +494,80 @@ svg:hover {
     color: white;
     text-decoration: none;
     font-size: 60%; }
+  .pagesWhitebg {
+    color: #fe9900; }
   /* What's New */
-  .newsVideos {
-    display: flex;
-    flex-flow: column;
-    justify-content: center;
-    scale: 0.7;
-    margin-left: -2rem; }
-  .textsFlex {
-    margin-left: 2.5rem; }
+  .whatsNew, .services {
+    width: 100%; }
+    .whatsNew .newsBoxes, .services .newsBoxes {
+      width: 90%;
+      align-content: center; }
+      .whatsNew .newsBoxes .newsFlex, .services .newsBoxes .newsFlex {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: -1rem; }
+        .whatsNew .newsBoxes .newsFlex .textsFlex, .services .newsBoxes .newsFlex .textsFlex {
+          max-width: 90%; }
+          .whatsNew .newsBoxes .newsFlex .textsFlex .newsSubTitles, .services .newsBoxes .newsFlex .textsFlex .newsSubTitles {
+            grid-area: title; }
+          .whatsNew .newsBoxes .newsFlex .textsFlex .newsTexts, .services .newsBoxes .newsFlex .textsFlex .newsTexts {
+            grid-area: texto; }
+        .whatsNew .newsBoxes .newsFlex .newsVideos, .services .newsBoxes .newsFlex .newsVideos {
+          max-width: 90%;
+          grid-area: video; }
   /* Artists and Catalogue */
   .artistsAndCatalogue {
-    display: block; }
+    display: block;
+    align-content: center;
+    text-align: center; }
+    .artistsAndCatalogue .artists {
+      display: block;
+      width: 100%;
+      align-content: center; }
+      .artistsAndCatalogue .artists p {
+        margin: 0rem 2rem 0rem 2rem; }
+    .artistsAndCatalogue .artistImg {
+      max-width: 100%;
+      scale: 0.6;
+      margin-top: -2rem;
+      margin-top: -4rem; }
+    .artistsAndCatalogue .catalogueFlex {
+      display: block;
+      max-width: 100%;
+      margin-top: -4rem; }
+      .artistsAndCatalogue .catalogueFlex .catalogue {
+        position: relative;
+        width: 100%;
+        top: 2rem; }
+        .artistsAndCatalogue .catalogueFlex .catalogue .playlist {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          margin-top: -4rem; }
+          .artistsAndCatalogue .catalogueFlex .catalogue .playlist:hover {
+            transform: scale(1.05, 1.05); }
   /* Gallery */
   .galleryGrid {
-    display: block; }
-  /* Services */
-  .services {
-    padding-left: none; }
-  .servicesTitle {
-    padding: none; }
-  .servicesFlex {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding-right: 2rem; }
-  .servicesBoxes {
-    width: 100%; }
+    max-width: 100%; }
+    .galleryGrid img {
+      display: block;
+      max-width: 100%;
+      object-fit: cover;
+      object-position: center; }
+  /* Services */
+  .services {
+    margin-left: -1rem; }
+    .services div {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-content: center; }
+      .services div fieldset {
+        width: 90%; }
   /* contact */
   .contact {
     width: 100%;

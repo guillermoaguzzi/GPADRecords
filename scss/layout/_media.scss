@@ -2,6 +2,7 @@
 
     /* Navbar */
 
+
     .navbar-expand-lg {
         background-color: black;
     }
@@ -13,12 +14,6 @@
 
     .nameAndSloganHome {
         visibility: hidden;
-        /* display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        position: fixed;
-        top: 0rem;
-        left: 7rem; */
     }
 
     .navbar-nav {
@@ -40,51 +35,117 @@
         font-size: 60%;
     }
 
+    .pagesWhitebg {
+        color: #fe9900;
+    }
+
     /* What's New */
 
-    .newsVideos {
-        display: flex;
-        flex-flow: column;
-        justify-content: center;
-        scale: 0.7;
-        margin-left: -2rem;
-    }
 
-    .textsFlex {
-        margin-left: 2.5rem;
+// .newsVideos {
+//     scale: 0.7;
+//     margin-left: -2rem;
+// }
+
+.whatsNew {
+width: 100%;
+    .newsBoxes {
+        width: 90%;
+        align-content: center;
+        .newsFlex {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: -1rem;
+            .textsFlex {
+                max-width: 90%;
+                .newsSubTitles {
+                    grid-area: title;
+                }
+                .newsTexts {
+                    grid-area: texto;
+                }
+            }
+            .newsVideos {
+                max-width: 90%;
+                grid-area: video;
+            }
+        }
     }
+}
+
+
 
     /* Artists and Catalogue */
 
     .artistsAndCatalogue {
         display: block;
+        align-content: center;
+        text-align: center;
+        .artists {
+            display: block;
+            width: 100%;
+            align-content: center;
+            p {
+                margin: 0rem 2rem 0rem 2rem;
+            }
+        }
+        .artistImg {
+            max-width: 100%;
+            scale: 0.6;
+            margin-top: -2rem;
+            margin-top: -4rem;
+        }
+        .catalogueFlex {
+            display: block;
+            max-width: 100%;
+            margin-top: -4rem;
+            .catalogue {
+                position: relative;
+                width: 100%;
+                top: 2rem;
+                .playlist {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    margin-top: -4rem;
+                    &:hover {
+                        transform: scale(1.05, 1.05);
+                    }
+                }
+        }
     }
+    }
+
 
     /* Gallery */
 
     .galleryGrid {
-        display: block;
+        display: flex;
+        flex-direction: column;
+        max-width: 100%;
+        img {
+            display: block;
+            max-width: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
     }
     /* Services */
-.services {
-    padding-left: none;
-}
 
-.servicesTitle {
-    padding: none;
-}
-
-.servicesFlex {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding-right: 2rem;
-}
-
-.servicesBoxes {
-    width: 100%;
-}
+    .services {
+        margin-left: -1rem;
+        div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-content: center;
+            fieldset {
+                width: 90%;
+            }
+        }
+    }
 
     /* contact */
 
@@ -96,7 +157,6 @@
         display: none;
     }
 }
-
 
 
 /* TABLET */

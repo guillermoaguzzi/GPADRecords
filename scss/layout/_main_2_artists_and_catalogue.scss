@@ -2,10 +2,16 @@
     display: flex;
     flex-direction: row;
     .artists {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         text-align: center;
         width: 50%;
         background-color: white;
         margin-top: 6.25rem;
+        article {
+        }
         h1 {
             text-align: center;
             padding-top: 2rem;
