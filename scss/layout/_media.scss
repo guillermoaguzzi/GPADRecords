@@ -2,50 +2,10 @@
 
     /* Navbar */
 
-
-    .navbar-expand-lg {
-        background-color: black;
-    }
-
-    .logoAndSloganFlex {
-        justify-content: flex-start;
-        align-items: flex-start;
-    }
-
     .nameAndSloganHome {
-        visibility: hidden;
+        display: none;
     }
 
-    .navbar-nav {
-        position: fixed;
-        align-items: flex-end;
-        top: 5rem;
-        right: 5rem;
-    }
-
-    .navbar-toggler {
-        position: fixed;
-        right: 2.6rem;
-        top: 2.2rem;
-    }
-
-    .pages {
-        color: white;
-        text-decoration: none;
-        font-size: 60%;
-    }
-
-    .pagesWhitebg {
-        color: #fe9900;
-    }
-
-    /* What's New */
-
-
-// .newsVideos {
-//     scale: 0.7;
-//     margin-left: -2rem;
-// }
 
 .whatsNew {
 width: 100%;
@@ -124,7 +84,7 @@ width: 100%;
     .galleryGrid {
         display: flex;
         flex-direction: column;
-        max-width: 100%;
+        max-width: 100vh;
         img {
             display: block;
             max-width: 100%;
@@ -132,6 +92,11 @@ width: 100%;
             object-position: center;
         }
     }
+
+    [data-aos] {
+        visibility: none;
+    }
+
     /* Services */
 
     .services {

@@ -20,8 +20,6 @@ html {
   z-index: 2; }
 
 #navbarNav {
-  display: flex;
-  flex-direction: row;
   justify-content: flex-end;
   margin-right: 2rem; }
   #navbarNav ul {
@@ -70,7 +68,7 @@ footer {
   background-color: black;
   text-align: center;
   position: relative;
-  bottom: 0rem; }
+  margin-bottom: -1rem; }
   footer div {
     padding: 1rem; }
     footer div a {
@@ -83,6 +81,24 @@ footer {
 svg:hover {
   fill: #fe9900;
   transform: scale(1.3, 1.3); }
+
+.bg-img-1 {
+  background-image: url("../../assets/img/carousel/1.jpg"); }
+
+.bg-img-2 {
+  background-image: url("../../assets/img/carousel/2.jpg"); }
+
+.bg-img-3 {
+  background-image: url("../../assets/img/carousel/3.jpg"); }
+
+.bg-img-4 {
+  background-image: url("../../assets/img/carousel/4.jpg"); }
+
+.carousel-image {
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; }
 
 /* what's new */
 .whatsNew, .services {
@@ -474,29 +490,8 @@ svg:hover {
 
 @media screen and (max-width: 576px) {
   /* Navbar */
-  .navbar-expand-lg {
-    background-color: black; }
-  .logoAndSloganFlex {
-    justify-content: flex-start;
-    align-items: flex-start; }
   .nameAndSloganHome {
-    visibility: hidden; }
-  .navbar-nav {
-    position: fixed;
-    align-items: flex-end;
-    top: 5rem;
-    right: 5rem; }
-  .navbar-toggler {
-    position: fixed;
-    right: 2.6rem;
-    top: 2.2rem; }
-  .pages {
-    color: white;
-    text-decoration: none;
-    font-size: 60%; }
-  .pagesWhitebg {
-    color: #fe9900; }
-  /* What's New */
+    display: none; }
   .whatsNew, .services {
     width: 100%; }
     .whatsNew .newsBoxes, .services .newsBoxes {
@@ -552,12 +547,14 @@ svg:hover {
   .galleryGrid {
     display: flex;
     flex-direction: column;
-    max-width: 100%; }
+    max-width: 100vh; }
     .galleryGrid img {
       display: block;
       max-width: 100%;
       object-fit: cover;
       object-position: center; }
+  [data-aos] {
+    visibility: none; }
   /* Services */
   .services {
     margin-left: -1rem; }
