@@ -99,7 +99,8 @@ SubmitBtn.onclick=(stop)=>{
     projectsStorage();
     BudgetsShow();
 
-    firstProjectName();
+/*     firstProjectName();
+    firstProjectBudget(); */
     }
 
     function projectsPush(){
@@ -457,13 +458,30 @@ function firstProjectStorage() {
 /*     console.log(firstProjectRecovered); */
     const firstProjectBudget = Object.values(firstProjectRecovered).reduce((t, {price}) => t + price, 0)
     console.log(firstProjectBudget)
+    /* firstProjectName --------------------------------------------------------------*/
+    sessionStorage.setItem('1stProjectName', projectName1.value);
+    let nameOfProject1 = sessionStorage.getItem('1stProjectName');
+    /* console.log(nameOfProject1); */
+    document.getElementById('budgetTitle1').innerHTML = 'Project Name: '+ nameOfProject1;
+    /* firstProjectBudget --------------------------------------------------------------*/
+    document.getElementById('budget1Price').innerHTML = 'Project Budget: $ '+ firstProjectBudget;
 }
+
+
+/* function firstProjectName() {
+
+}
+function firstProjectBudget() {
+    
+} */
 
 function showBudgetField1() {
     if((songwriting1.checked == true) || (arrangements1.checked == true) || (transcription1.checked == true) || (production1.checked == true) || (mix1.checked == true) || (mastering1.checked == true)  || (distribution1.checked == true)){
         budgetField1.className = 'servicesFieldVisible';
     }
 }
+
+
 
 /*     PROJECT 2  */
 
@@ -542,10 +560,11 @@ const projectName4 = document.getElementById('projectName4');
 const projectName5 = document.getElementById('projectName5');
 
 
-function firstProjectName() {
-    sessionStorage.setItem('1stProjectName', projectName1.value);
-    let nameOfProject1 = sessionStorage.getItem('1stProjectName');
-    /* console.log(nameOfProject1); */
-    document.getElementById('budgetTitle1').innerHTML = 'Project Name: '+ nameOfProject1;
-}
+
+/* const budgetProject1 = document.getElementById('budget1Price');
+const budgetProject2 = document.getElementById('budget2Price');
+const budgetProject3 = document.getElementById('budget3Price');
+const budgetProject4 = document.getElementById('budget4Price');
+const budgetProject5 = document.getElementById('budget5Price'); */
+
 
