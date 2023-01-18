@@ -355,24 +355,24 @@ svg:hover {
         font-size: larger; }
 
 /* contact */
-.contactFlex {
+.contactFlex, .budgetFlex {
   background-color: #fe9900;
   display: flex;
   flex-direction: row;
   justify-content: center;
   padding-top: 6.25rem; }
 
-.contact {
+.contact, .budget {
   width: 50%;
   font-size: larger; }
-  .contact fieldset {
+  .contact fieldset, .budget fieldset {
     border-style: dashed;
     border-color: white;
     border-radius: 2rem;
     border-width: 0.1rem;
     margin: 2rem;
     padding: 2rem; }
-  .contact legend {
+  .contact legend, .budget legend {
     font-size: x-large;
     text-align: center; }
 
@@ -381,7 +381,7 @@ svg:hover {
   .contactImg img {
     object-fit: cover; }
 
-.contactText {
+.contactText, .budgetText {
   text-align: center;
   padding-bottom: 2rem; }
 
@@ -422,7 +422,7 @@ svg:hover {
 .PhoneBlock {
   display: block; }
 
-.languageBlock {
+.languageBlock, .projectsQtyBlock {
   display: block;
   margin-top: 2rem; }
 
@@ -451,13 +451,13 @@ svg:hover {
   margin-top: 2rem;
   margin-bottom: 1rem; }
 
-.queryMessage {
+.queryMessage, .observationsMessage {
   width: 100%;
   margin-bottom: 2rem;
   font-family: "Quicksand";
   font-size: large;
   color: black; }
-  .queryMessage:hover {
+  .queryMessage:hover, .observationsMessage:hover {
     box-shadow: 0rem 0rem 3rem #4F3000; }
 
 .fileFlex {
@@ -477,16 +477,52 @@ svg:hover {
   align-items: center;
   padding-top: 3rem; }
 
-.submitButton {
-  height: 1.5rem;
+.submitButton, .submitButtonHidden, .submitButtonVisible {
+  align-items: center;
+  height: 2rem;
   width: 20%;
   border-radius: 2rem;
   border-color: white;
   transition: all 0.5s; }
-  .submitButton:hover {
+  .submitButton:hover, .submitButtonHidden:hover, .submitButtonVisible:hover {
     transform: scale(1.1, 1.1);
     background-color: black;
     color: white; }
+
+/* contact */
+/* .budgetEstimator {
+    @extend .whatsNew;
+    background-color: $background-principal;
+    h1 {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        text-align: center;}
+} */
+/* .budgetTitle {
+    @extend .contactTitle;
+} */
+#projectsQty {
+  font-size: medium; }
+
+.projectsTitle {
+  font-size: 120%;
+  font-style: italic; }
+
+.observationsMessage {
+  padding-bottom: -2rem; }
+
+.submitButtonHidden {
+  visibility: hidden; }
+
+.servicesFieldHidden {
+  display: none; }
+
+.servicesFieldVisible {
+  display: contents; }
+
+.projectTitle {
+  font-size: 100%;
+  font-style: medium; }
 
 @media screen and (max-width: 576px) {
   /* Navbar */
@@ -566,7 +602,7 @@ svg:hover {
       .services div fieldset {
         width: 90%; }
   /* contact */
-  .contact {
+  .contact, .budget {
     width: 100%;
     font-size: 80%; }
   aside {
@@ -588,7 +624,7 @@ svg:hover {
   .navbar-toggler {
     margin-top: -1rem; }
   /* contact */
-  .contact {
+  .contact, .budget {
     width: 100%;
     font-size: 80%; }
   .contactImg {

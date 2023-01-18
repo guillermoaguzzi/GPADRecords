@@ -1,0 +1,66 @@
+/* contact */
+
+/* .budgetEstimator {
+    @extend .whatsNew;
+    background-color: $background-principal;
+    h1 {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        text-align: center;}
+} */
+
+.budgetFlex {
+    @extend .contactFlex;
+}
+
+.budget {
+    @extend .contact;
+}
+
+/* .budgetTitle {
+    @extend .contactTitle;
+} */
+
+.budgetText {
+    @extend .contactText;
+}
+
+.projectsQtyBlock {
+    @extend .languageBlock;
+}
+
+#projectsQty {
+    font-size: medium;
+}
+
+.projectsTitle {
+    font-size: 120%;
+    font-style: italic;
+}
+
+.observationsMessage {
+    @extend .queryMessage;
+    padding-bottom: -2rem;
+}
+
+.submitButtonHidden {
+    @extend .submitButton;
+    visibility: hidden;
+}
+
+.submitButtonVisible {
+    @extend .submitButton;
+}
+
+.servicesFieldHidden {
+    display: none;
+}
+
+.servicesFieldVisible {
+    display: contents;
+}
+
+.projectTitle {
+    font-size: 100%;
+    font-style: medium;
+}
