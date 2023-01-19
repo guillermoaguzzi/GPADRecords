@@ -1,13 +1,5 @@
-/* contact */
+/* budget estimator */
 
-/* .budgetEstimator {
-    @extend .whatsNew;
-    background-color: $background-principal;
-    h1 {
-        padding-top: 2rem;
-        padding-bottom: 2rem;
-        text-align: center;}
-} */
 
 .budgetFlex {
     @extend .contactFlex;
@@ -17,9 +9,10 @@
     @extend .contact;
 }
 
-/* .budgetTitle {
-    @extend .contactTitle;
-} */
+.budgetTitle {
+    text-align: center;
+    padding: 2rem;
+}
 
 .budgetText {
     @extend .contactText;

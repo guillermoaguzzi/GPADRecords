@@ -489,18 +489,11 @@ svg:hover {
     background-color: black;
     color: white; }
 
-/* contact */
-/* .budgetEstimator {
-    @extend .whatsNew;
-    background-color: $background-principal;
-    h1 {
-        padding-top: 2rem;
-        padding-bottom: 2rem;
-        text-align: center;}
-} */
-/* .budgetTitle {
-    @extend .contactTitle;
-} */
+/* budget estimator */
+.budgetTitle {
+  text-align: center;
+  padding: 2rem; }
+
 #projectsQty {
   font-size: medium; }
 

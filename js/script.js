@@ -90,42 +90,35 @@ const services = [
 
 SubmitBtn.onclick=(stop)=>{
     stop.preventDefault();
-    projectsPush()
-    console.log(project1services);
-    console.log(project2services);
-    console.log(project3services);
-    console.log(project4services);
-    console.log(project5services);
+    projectsPush();
     projectsStorage();
+    showBudgetArtistField();
     BudgetsShow();
-
-/*     firstProjectName();
-    firstProjectBudget(); */
     }
 
-    function projectsPush(){
-        project1servicesPush();
-        project2servicesPush();
-        project3servicesPush();
-        project4servicesPush();
-        project5servicesPush();
-        }
+function projectsPush(){
+    project1servicesPush();
+    project2servicesPush();
+    project3servicesPush();
+    project4servicesPush();
+    project5servicesPush();
+    }
 
-        function projectsStorage(){
-            firstProjectStorage();
-            secondProjectStorage();
-            thirdProjectStorage();
-            fourthProjectStorage();
-            fifthProjectStorage();
-            }
+function projectsStorage(){
+    firstProjectStorage();
+    secondProjectStorage();
+    thirdProjectStorage();
+    fourthProjectStorage();
+    fifthProjectStorage();
+    }
 
-        function BudgetsShow(){
-            showBudgetField1();
-/*             showBudgetField2();
-            showBudgetField3();
-            showBudgetField4();
-            showBudgetField5(); */
-            }
+function BudgetsShow(){
+    showBudgetField1();
+    showBudgetField2();
+    showBudgetField3();
+    showBudgetField4();
+    showBudgetField5();
+    }
 
 
 /*     PROJECT 1 - , ARRAY, GET ELEMENTS & FUNCTIONS  */
@@ -449,31 +442,35 @@ const budgetField5 = document.getElementById('budgetField5');
 
 /*     STORAGE AND SHOW BUDGET FUNCTIONS  */
 
+const fullName = document.getElementById('fullName');
+const budgetArtistDiv = document.getElementById('budgetArtist');
+
+
+function showBudgetArtistField() {
+    /* Artist Name --------------------------------------------------------------*/
+    sessionStorage.setItem('fullName', fullName.value);
+    let artistNameVariable = sessionStorage.getItem('fullName');
+    document.getElementById('budgetArtistTitle').innerHTML = '<strong>This is the budget for: </strong>'+ artistNameVariable;
+    budgetArtistDiv.className = 'servicesFieldVisible';
+}
+
 /*     PROJECT 1  */
 
 function firstProjectStorage() {
     sessionStorage.setItem('servicesFirstProject',JSON.stringify(project1services));
-    /* console.log(sessionStorage.getItem('servicesFirstProject')); */
     let firstProjectRecovered = JSON.parse(sessionStorage.getItem('servicesFirstProject'));
-/*     console.log(firstProjectRecovered); */
-    const firstProjectBudget = Object.values(firstProjectRecovered).reduce((t, {price}) => t + price, 0)
-    console.log(firstProjectBudget)
+    const firstProjectBudget = Object.values(firstProjectRecovered).reduce((t, {price}) => t + price, 0);
+    console.log(firstProjectBudget);
     /* firstProjectName --------------------------------------------------------------*/
     sessionStorage.setItem('1stProjectName', projectName1.value);
     let nameOfProject1 = sessionStorage.getItem('1stProjectName');
-    /* console.log(nameOfProject1); */
-    document.getElementById('budgetTitle1').innerHTML = 'Project Name: '+ nameOfProject1;
+    document.getElementById('budgetTitle1').innerHTML = '<strong>Project Name: </strong>'+ nameOfProject1;
     /* firstProjectBudget --------------------------------------------------------------*/
     document.getElementById('budget1Price').innerHTML = 'Project Budget: $ '+ firstProjectBudget;
 }
 
 
-/* function firstProjectName() {
 
-}
-function firstProjectBudget() {
-    
-} */
 
 function showBudgetField1() {
     if((songwriting1.checked == true) || (arrangements1.checked == true) || (transcription1.checked == true) || (production1.checked == true) || (mix1.checked == true) || (mastering1.checked == true)  || (distribution1.checked == true)){
@@ -487,11 +484,15 @@ function showBudgetField1() {
 
 function secondProjectStorage() {
     sessionStorage.setItem('servicesSecondProject',JSON.stringify(project2services));
-    /* console.log(sessionStorage.getItem('servicesSecondProject')); */
     let secondProjectRecovered = JSON.parse(sessionStorage.getItem('servicesSecondProject'));
-/*     console.log(secondProjectRecovered); */
-    const secondProjectBudget = Object.values(secondProjectRecovered).reduce((t, {price}) => t + price, 0)
-    console.log(secondProjectBudget)
+    const secondProjectBudget = Object.values(secondProjectRecovered).reduce((t, {price}) => t + price, 0);
+    console.log(secondProjectBudget);
+        /* secondProjectName --------------------------------------------------------------*/
+        sessionStorage.setItem('2ndProjectName', projectName2.value);
+        let nameOfProject2 = sessionStorage.getItem('2ndProjectName');
+        document.getElementById('budgetTitle2').innerHTML = '<strong>Project Name: </strong>'+ nameOfProject2;
+        /* secondProjectBudget --------------------------------------------------------------*/
+        document.getElementById('budget2Price').innerHTML = 'Project Budget: $ '+ secondProjectBudget;
 }
 
 function showBudgetField2() {
@@ -504,11 +505,15 @@ function showBudgetField2() {
 
 function thirdProjectStorage() {
     sessionStorage.setItem('servicesThirdProject',JSON.stringify(project3services));
-    /* console.log(sessionStorage.getItem('servicesThirdProject')); */
     let thirdProjectRecovered = JSON.parse(sessionStorage.getItem('servicesThirdProject'));
-/*     console.log(thirdProjectRecovered); */
-    const thirdProjectBudget = Object.values(thirdProjectRecovered).reduce((t, {price}) => t + price, 0)
-    console.log(thirdProjectBudget)
+    const thirdProjectBudget = Object.values(thirdProjectRecovered).reduce((t, {price}) => t + price, 0);
+    console.log(thirdProjectBudget);
+        /* thirdProjectName --------------------------------------------------------------*/
+        sessionStorage.setItem('3rdProjectName', projectName3.value);
+        let nameOfProject3 = sessionStorage.getItem('3rdProjectName');
+        document.getElementById('budgetTitle3').innerHTML = '<strong>Project Name: </strong>'+ nameOfProject3;
+        /* thirdProjectBudget --------------------------------------------------------------*/
+        document.getElementById('budget3Price').innerHTML = 'Project Budget: $ '+ thirdProjectBudget;
 }
 
 function showBudgetField3() {
@@ -522,11 +527,15 @@ function showBudgetField3() {
 
 function fourthProjectStorage() {
     sessionStorage.setItem('servicesFourthProject',JSON.stringify(project4services));
-    /* console.log(sessionStorage.getItem('servicesFourthProject')); */
     let fourthProjectRecovered = JSON.parse(sessionStorage.getItem('servicesFourthProject'));
-/*     console.log(fourthProjectRecovered); */
-    const fourthProjectBudget = Object.values(fourthProjectRecovered).reduce((t, {price}) => t + price, 0)
-    console.log(fourthProjectBudget)
+    const fourthProjectBudget = Object.values(fourthProjectRecovered).reduce((t, {price}) => t + price, 0);
+    console.log(fourthProjectBudget);
+        /* fourthProjectName --------------------------------------------------------------*/
+        sessionStorage.setItem('4thProjectName', projectName4.value);
+        let nameOfProject4 = sessionStorage.getItem('4thProjectName');
+        document.getElementById('budgetTitle4').innerHTML = '<strong>Project Name: </strong>'+ nameOfProject4;
+        /* fourthProjectBudget --------------------------------------------------------------*/
+        document.getElementById('budget4Price').innerHTML = 'Project Budget: $ '+ fourthProjectBudget;
 }
 
 function showBudgetField4() {
@@ -542,8 +551,14 @@ function fifthProjectStorage() {
     /* console.log(sessionStorage.getItem('servicesFifthProject')); */
     let fifthProjectRecovered = JSON.parse(sessionStorage.getItem('servicesFifthProject'));
 /*     console.log(fifthProjectRecovered); */
-    const fifthProjectBudget = Object.values(fifthProjectRecovered).reduce((t, {price}) => t + price, 0)
-    console.log(fifthProjectBudget)
+    const fifthProjectBudget = Object.values(fifthProjectRecovered).reduce((t, {price}) => t + price, 0);
+    console.log(fifthProjectBudget);
+        /* fifthProjectName --------------------------------------------------------------*/
+        sessionStorage.setItem('5thProjectName', projectName5.value);
+        let nameOfProject5 = sessionStorage.getItem('5thProjectName');
+        document.getElementById('budgetTitle5').innerHTML = '<strong>Project Name: </strong>'+ nameOfProject5;
+        /* fifthProjectBudget --------------------------------------------------------------*/
+        document.getElementById('budget5Price').innerHTML = 'Project Budget: $ '+ fifthProjectBudget;
 }
 
 function showBudgetField5() {
@@ -558,13 +573,3 @@ const projectName2 = document.getElementById('projectName2');
 const projectName3 = document.getElementById('projectName3');
 const projectName4 = document.getElementById('projectName4');
 const projectName5 = document.getElementById('projectName5');
-
-
-
-/* const budgetProject1 = document.getElementById('budget1Price');
-const budgetProject2 = document.getElementById('budget2Price');
-const budgetProject3 = document.getElementById('budget3Price');
-const budgetProject4 = document.getElementById('budget4Price');
-const budgetProject5 = document.getElementById('budget5Price'); */
-
-
