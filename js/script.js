@@ -1,20 +1,21 @@
+/* CREATION OF ARRAY WITH FETCH */
+
 const services = [
-    {name: 'songwriting',
-    price: 50},
-    {name: 'Arrangements',
-    price: 30},
-    {name: 'transcription',
-    price: 35},
-    {name: 'production',
-    price: 10},
-    {name: 'mix',
-    price: 30},
-    {name: 'master',
-    price: 15},
-    {name: 'distribution',
-    price: 5},
 ]
 
+const createServiceArray = async () => {
+const resp = await fetch("../data.json")
+
+const data = await resp.json()
+
+data.forEach((post) => {
+const service = new Object();
+    service.name = post.name
+    service.price = post.price
+    services.push(service);
+});
+};
+createServiceArray();
 
 /*     PROJECT QTY SELECTOR     */
 
@@ -86,14 +87,46 @@ const services = [
     } 
 
 
-/*     SUBMIT BUTTON - CLICKON FUNCTION     */
+/*     SUBMIT BUTTON - CLICKON FUNCTION AND OTHERS    */
 
 SubmitBtn.onclick=(stop)=>{
     stop.preventDefault();
-    projectsPush();
-    projectsStorage();
-    showBudgetArtistField();
-    BudgetsShow();
+    confirmation();
+    }
+
+    function confirmation(){
+    Swal.fire({
+        title: 'Are you sure?',
+        text: "Make sure all your projects have their services properly selected!",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#FE9900',
+        cancelButtonColor: 'black',
+        confirmButtonText: 'Go ahead!',
+        cancelButtonText: 'Modify',
+    }).then((result) => {
+        if (result.isConfirmed) {
+        Swal.fire(
+            'Amazing!',
+            'Here is your budget.',
+            'success'
+        )
+        projectsPush();
+        projectsStorage();
+        showBudgetArtistField();
+        BudgetsShow();
+        hideFields();
+        } else if (result.isDenied) {
+            Swal.fire();
+        }
+    })
+}
+
+const fullNameAndProjectsQtyField = document.getElementById('fullNameAndProjectsQtyField');
+
+function hideFields(){
+    fullNameAndProjectsQtyField.className = 'servicesFieldHidden';
+    document.getElementById('budgetText').innerHTML = 'Here is an idea of ​​the budget for your projects!';
     }
 
 function projectsPush(){
@@ -431,6 +464,7 @@ function distribution5Push(){
 }
 
 
+/*     STORAGE AND SHOW BUDGET FUNCTIONS  */
 
 const budgetField1 = document.getElementById('budgetField1');
 const budgetField2 = document.getElementById('budgetField2');
@@ -438,9 +472,12 @@ const budgetField3 = document.getElementById('budgetField3');
 const budgetField4 = document.getElementById('budgetField4');
 const budgetField5 = document.getElementById('budgetField5');
 
+const projectName1 = document.getElementById('projectName1');
+const projectName2 = document.getElementById('projectName2');
+const projectName3 = document.getElementById('projectName3');
+const projectName4 = document.getElementById('projectName4');
+const projectName5 = document.getElementById('projectName5');
 
-
-/*     STORAGE AND SHOW BUDGET FUNCTIONS  */
 
 const fullName = document.getElementById('fullName');
 const budgetArtistDiv = document.getElementById('budgetArtist');
@@ -450,7 +487,7 @@ function showBudgetArtistField() {
     /* Artist Name --------------------------------------------------------------*/
     sessionStorage.setItem('fullName', fullName.value);
     let artistNameVariable = sessionStorage.getItem('fullName');
-    document.getElementById('budgetArtistTitle').innerHTML = '<strong>This is the budget for: </strong>'+ artistNameVariable;
+    document.getElementById('budgetArtistTitle').innerHTML = artistNameVariable +'´s Budget';
     budgetArtistDiv.className = 'servicesFieldVisible';
 }
 
@@ -460,21 +497,17 @@ function firstProjectStorage() {
     sessionStorage.setItem('servicesFirstProject',JSON.stringify(project1services));
     let firstProjectRecovered = JSON.parse(sessionStorage.getItem('servicesFirstProject'));
     const firstProjectBudget = Object.values(firstProjectRecovered).reduce((t, {price}) => t + price, 0);
-    console.log(firstProjectBudget);
     /* firstProjectName --------------------------------------------------------------*/
     sessionStorage.setItem('1stProjectName', projectName1.value);
     let nameOfProject1 = sessionStorage.getItem('1stProjectName');
-    document.getElementById('budgetTitle1').innerHTML = '<strong>Project Name: </strong>'+ nameOfProject1;
+    document.getElementById('budgetTitle1').innerHTML = nameOfProject1;
     /* firstProjectBudget --------------------------------------------------------------*/
     document.getElementById('budget1Price').innerHTML = 'Project Budget: $ '+ firstProjectBudget;
 }
 
-
-
-
 function showBudgetField1() {
     if((songwriting1.checked == true) || (arrangements1.checked == true) || (transcription1.checked == true) || (production1.checked == true) || (mix1.checked == true) || (mastering1.checked == true)  || (distribution1.checked == true)){
-        budgetField1.className = 'servicesFieldVisible';
+        budgetField1.className = 'budgetFieldVisible';
     }
 }
 
@@ -486,18 +519,17 @@ function secondProjectStorage() {
     sessionStorage.setItem('servicesSecondProject',JSON.stringify(project2services));
     let secondProjectRecovered = JSON.parse(sessionStorage.getItem('servicesSecondProject'));
     const secondProjectBudget = Object.values(secondProjectRecovered).reduce((t, {price}) => t + price, 0);
-    console.log(secondProjectBudget);
         /* secondProjectName --------------------------------------------------------------*/
         sessionStorage.setItem('2ndProjectName', projectName2.value);
         let nameOfProject2 = sessionStorage.getItem('2ndProjectName');
-        document.getElementById('budgetTitle2').innerHTML = '<strong>Project Name: </strong>'+ nameOfProject2;
+        document.getElementById('budgetTitle2').innerHTML = nameOfProject2;
         /* secondProjectBudget --------------------------------------------------------------*/
         document.getElementById('budget2Price').innerHTML = 'Project Budget: $ '+ secondProjectBudget;
 }
 
 function showBudgetField2() {
     if((songwriting2.checked == true) || (arrangements2.checked == true) || (transcription2.checked == true) || (production2.checked == true) || (mix1.checked == true) || (mastering2.checked == true)  || (distribution2.checked == true)){
-        budgetField2.className = 'servicesFieldVisible';
+        budgetField2.className = 'budgetFieldVisible';
     }
 }
 
@@ -507,18 +539,17 @@ function thirdProjectStorage() {
     sessionStorage.setItem('servicesThirdProject',JSON.stringify(project3services));
     let thirdProjectRecovered = JSON.parse(sessionStorage.getItem('servicesThirdProject'));
     const thirdProjectBudget = Object.values(thirdProjectRecovered).reduce((t, {price}) => t + price, 0);
-    console.log(thirdProjectBudget);
         /* thirdProjectName --------------------------------------------------------------*/
         sessionStorage.setItem('3rdProjectName', projectName3.value);
         let nameOfProject3 = sessionStorage.getItem('3rdProjectName');
-        document.getElementById('budgetTitle3').innerHTML = '<strong>Project Name: </strong>'+ nameOfProject3;
+        document.getElementById('budgetTitle3').innerHTML = nameOfProject3;
         /* thirdProjectBudget --------------------------------------------------------------*/
         document.getElementById('budget3Price').innerHTML = 'Project Budget: $ '+ thirdProjectBudget;
 }
 
 function showBudgetField3() {
     if((songwriting3.checked == true) || (arrangements3.checked == true) || (transcription3.checked == true) || (production3.checked == true) || (mix3.checked == true) || (mastering3.checked == true)  || (distribution3.checked == true)){
-        budgetField3.className = 'servicesFieldVisible';
+        budgetField3.className = 'budgetFieldVisible';
     }
 }
 
@@ -529,18 +560,17 @@ function fourthProjectStorage() {
     sessionStorage.setItem('servicesFourthProject',JSON.stringify(project4services));
     let fourthProjectRecovered = JSON.parse(sessionStorage.getItem('servicesFourthProject'));
     const fourthProjectBudget = Object.values(fourthProjectRecovered).reduce((t, {price}) => t + price, 0);
-    console.log(fourthProjectBudget);
         /* fourthProjectName --------------------------------------------------------------*/
         sessionStorage.setItem('4thProjectName', projectName4.value);
         let nameOfProject4 = sessionStorage.getItem('4thProjectName');
-        document.getElementById('budgetTitle4').innerHTML = '<strong>Project Name: </strong>'+ nameOfProject4;
+        document.getElementById('budgetTitle4').innerHTML = nameOfProject4;
         /* fourthProjectBudget --------------------------------------------------------------*/
         document.getElementById('budget4Price').innerHTML = 'Project Budget: $ '+ fourthProjectBudget;
 }
 
 function showBudgetField4() {
     if((songwriting4.checked == true) || (arrangements4.checked == true) || (transcription4.checked == true) || (production4.checked == true) || (mix4.checked == true) || (mastering4.checked == true)  || (distribution4.checked == true)){
-        budgetField4.className = 'servicesFieldVisible';
+        budgetField4.className = 'budgetFieldVisible';
     }
 }
 
@@ -548,28 +578,20 @@ function showBudgetField4() {
 
 function fifthProjectStorage() {
     sessionStorage.setItem('servicesFifthProject',JSON.stringify(project5services));
-    /* console.log(sessionStorage.getItem('servicesFifthProject')); */
     let fifthProjectRecovered = JSON.parse(sessionStorage.getItem('servicesFifthProject'));
-/*     console.log(fifthProjectRecovered); */
     const fifthProjectBudget = Object.values(fifthProjectRecovered).reduce((t, {price}) => t + price, 0);
-    console.log(fifthProjectBudget);
         /* fifthProjectName --------------------------------------------------------------*/
         sessionStorage.setItem('5thProjectName', projectName5.value);
         let nameOfProject5 = sessionStorage.getItem('5thProjectName');
-        document.getElementById('budgetTitle5').innerHTML = '<strong>Project Name: </strong>'+ nameOfProject5;
+        document.getElementById('budgetTitle5').innerHTML = nameOfProject5;
         /* fifthProjectBudget --------------------------------------------------------------*/
         document.getElementById('budget5Price').innerHTML = 'Project Budget: $ '+ fifthProjectBudget;
 }
 
 function showBudgetField5() {
     if((songwriting5.checked == true) || (arrangements5.checked == true) || (transcription5.checked == true) || (production5.checked == true) || (mix5.checked == true) || (mastering5.checked == true)  || (distribution5.checked == true)){
-        budgetField5.className = 'servicesFieldVisible';
+        budgetField5.className = 'budgetFieldVisible';
     }
 }
 
 
-const projectName1 = document.getElementById('projectName1');
-const projectName2 = document.getElementById('projectName2');
-const projectName3 = document.getElementById('projectName3');
-const projectName4 = document.getElementById('projectName4');
-const projectName5 = document.getElementById('projectName5');

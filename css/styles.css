@@ -507,15 +507,32 @@ svg:hover {
 .submitButtonHidden {
   visibility: hidden; }
 
+.submitButtonVisible {
+  margin-top: 2rem;
+  align-self: center; }
+
 .servicesFieldHidden {
   display: none; }
+
+.SubmitFlexBudget {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
 
 .servicesFieldVisible {
   display: contents; }
 
+.budgetFieldVisible {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
 .projectTitle {
   font-size: 100%;
   font-style: medium; }
+
+#budgetField1, #budgetArtistTitle {
+  margin-top: 2rem; }
 
 @media screen and (max-width: 576px) {
   /* Navbar */

@@ -1,0 +1,9 @@
+[
+    {"name": "songwriting", "price": 50},
+    {"name": "arrangements", "price": 30},
+    {"name": "transcription", "price": 35},
+    {"name": "production", "price": 10},
+    {"name": "mix", "price": 30},
+    {"name": "master", "price": 15},
+    {"name": "distribution", "price": 5}
+]
