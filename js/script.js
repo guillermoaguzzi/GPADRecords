@@ -21,18 +21,23 @@ createServiceArray();
 
     document.querySelector('#projectsQty').addEventListener("change", function() {
         if (this.value == "1") {
+            hideServicesFields()
             showServicesField1()
             showSubmitBtn();
         }else if (this.value == "2") {
+            hideServicesFields()
             showServicesField2()
             showSubmitBtn();
         }else if (this.value == "3") {
+            hideServicesFields()
             showServicesField3()
             showSubmitBtn();
         }else if (this.value == "4") {
+            hideServicesFields()
             showServicesField4()
             showSubmitBtn();
         }else if (this.value == "5") {
+            hideServicesFields()
             showServicesField5()
             showSubmitBtn();
         }
@@ -45,6 +50,14 @@ createServiceArray();
     const servicesField3 = document.getElementById('servicesField3');
     const servicesField4 = document.getElementById('servicesField4');
     const servicesField5 = document.getElementById('servicesField5');
+
+    function hideServicesFields() {
+        servicesField1.className = 'servicesFieldHidden';
+        servicesField2.className = 'servicesFieldHidden';
+        servicesField3.className = 'servicesFieldHidden';
+        servicesField4.className = 'servicesFieldHidden';
+        servicesField5.className = 'servicesFieldHidden';
+    }
 
     function showServicesField1() {
         servicesField1.className = 'servicesFieldVisible';
